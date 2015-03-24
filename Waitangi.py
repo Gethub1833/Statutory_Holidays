@@ -1,8 +1,7 @@
 import datetime
-import astr
 
 '''Waitangi day is celebrated on the 6th of February, each year.
-From 1 January 2014 the public holiday for ANZAC Day and Waitangi Day will be “Mondayised” if they fall on a Saturday or Sunday.
+From 1 January 2014 the public holiday for ANZAC Day and Waitangi Day will be Mondayised if they fall on a Saturday or Sunday.
 
 This means, if Waitangi Day or ANZAC Day fall on a Saturday or Sunday:
 
@@ -31,7 +30,7 @@ def get_holiday(year):
             # Saturday
             return datetime.date(year, FEBRUARY, 8)
     else:
-        return datetime.date(year, FEBRUARY, 25)
+        return datetime.date(year, FEBRUARY, 6)
 
 def get_actual(year):
     '''

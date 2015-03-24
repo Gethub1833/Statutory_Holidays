@@ -1,5 +1,4 @@
 import datetime
-import astropy
 
 '''Day After New Years day is celebrated on the 2nd of January, each year.
 However if the 2nd falls on the weekend then the holiday will be on the following Monday or Tuesday.
@@ -22,7 +21,7 @@ def get_holiday(year):
         # New Years falls on the weekend
         return datetime.date(year, JANUARY, 4)
     else:
-        return datetime.date(year, JANUARY, 1)
+        return datetime.date(year, JANUARY, 2)
 
 def get_actual(year):
     '''
