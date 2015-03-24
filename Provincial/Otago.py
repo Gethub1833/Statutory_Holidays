@@ -1,6 +1,8 @@
 __author__ = 'shane'
 from datetime import date, timedelta
 
+import stat_helper
+
 
 def get_holiday(year):
     MARCH = 3
@@ -10,6 +12,11 @@ def get_holiday(year):
     easter_sunday = Easter_Sunday.get_actual(year)
     if easter_sunday.month == MARCH:
         pass
+    else:
+        return stat_helper.get_nearest_monday(get_actual(year))
+
+def get_holiday(year):
+
 
     if weekday == 0:
         # Sunday

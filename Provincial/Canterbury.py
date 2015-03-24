@@ -7,7 +7,7 @@ Second Friday after the first Tuesday in November (Christchurch City) — to coi
 from datetime import timedelta, date
 
 def get_holiday(year):
-    NOVEMBER = 12
+    NOVEMBER = 11
     # First Tuesday in NOVEMBER
     weekday = date(year, NOVEMBER, 1).weekday()
     # 0 +1
@@ -19,7 +19,9 @@ def get_holiday(year):
     # 9 - weekday
     else:
         weekday = (9 - weekday)
+    # return second Friday after first Tuesday
     return date(year, NOVEMBER, weekday)+timedelta(days=10)
+
 
 def get_actual(year):
     DECEMBER = 12
