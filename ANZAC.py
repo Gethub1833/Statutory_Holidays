@@ -26,6 +26,8 @@ def get_holiday(year):
         elif day_of_week == 5:
             # Saturday
             return date(year, APRIL, 27)
+        else:
+            return date(year, APRIL, 25)
     else:
         return date(year, APRIL, 25)
 

@@ -23,12 +23,15 @@ def get_holiday(year):
 
     day_of_week = datetime.date(year, FEBRUARY, 6).weekday()
     if year >= 2014:
+        # Mondayise if Waitangi day falls on the weekend
         if day_of_week == 6:
             # Waitangi day fell on a Sunday
             return datetime.date(year, FEBRUARY, 7)
         elif day_of_week == 5:
             # Saturday
             return datetime.date(year, FEBRUARY, 8)
+        else:
+            return datetime.date(year, FEBRUARY, 6)
     else:
         return datetime.date(year, FEBRUARY, 6)
 
