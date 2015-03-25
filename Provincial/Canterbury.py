@@ -1,8 +1,10 @@
+# -*- coding: utf-8 -*-
 __author__ = 'shane'
 '''
-Canterbury	Christchurch, Ashburton	16 December	Christchurch Show Day (Northern Canterbury)
+Canterbury Christchurch, Ashburton 16 December Christchurch Show Day (Northern Canterbury)
 Christchurch Show Day (Central Canterbury)
-Second Friday after the first Tuesday in November (Christchurch City) — to coincide with the Agricultural and Pastoral Show.
+Second Friday after the first Tuesday in November (Christchurch City) - to coincide with
+the Agricultural and Pastoral Show.
 '''
 from datetime import timedelta, date
 
@@ -11,16 +13,14 @@ def get_holiday(year):
     # First Tuesday in NOVEMBER
     weekday = date(year, NOVEMBER, 1).weekday()
     # 0 +1
-    if weekday in (0,1):
-        weekday += 2-weekday
-    #
-    elif weekday == 2:
-        pass
-    # 9 - weekday
+    if weekday in (0, 1):
+        # Monday and Tuesday
+        correction = weekday + 1-weekday
     else:
-        weekday = (9 - weekday)
+        # Wednesday, Thursday, Friday, Saturday, Sunday
+        correction = weekday + (6 - weekday)
     # return second Friday after first Tuesday
-    return date(year, NOVEMBER, weekday)+timedelta(days=10)
+    return date(year, NOVEMBER, 1)+timedelta(days=correction+10)
 
 
 def get_actual(year):

@@ -1,6 +1,6 @@
 __author__ = 'shane'
 '''
-South Canterbury	25 September	Fourth Monday in September — Dominion Day
+South Canterbury 25 September Fourth Monday in September - Dominion Day
 '''
 from datetime import date
 

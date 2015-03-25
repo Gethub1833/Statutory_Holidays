@@ -1,5 +1,6 @@
 __author__ = 'shane'
-from datetime import date, timedelta
+from datetime import date
+import stat_helper
 
 '''
 Auckland Anniversary Day is a public holiday observed in the northern half of
@@ -25,8 +26,6 @@ to be held a GENERAL HOLIDAY, on which occasion the Public Offices will be
 closed.
 '''
 
-import stat_helper
-
 
 def get_holiday(year):
     return stat_helper.get_nearest_monday(get_actual(year))
@@ -35,17 +34,3 @@ def get_holiday(year):
 def get_actual(year):
     JANUARY = 1
     return date(year, JANUARY, 29)
-
-
-'''
-Test Dates
-Auckland Anniversary Day
-Also called	Northland Anniversary Day (locally in the region)
-Observed by	former Auckland Province, New Zealand
-Date	Monday closest to 29 January
-2014 date	27 January
-2015 date	26 January
-2016 date	1 February
-2017 date	30 January
-Frequency	annual
-'''
