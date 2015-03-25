@@ -56,7 +56,6 @@ assert sut.weekday() == 2
 Friday 17 November	Friday 16 November	Friday 14 November	Friday 13 November	Friday 12 November
 '''
 sut = Canterbury.get_holiday(2006)
-print sut
 assert sut.year == 2006
 assert sut.month == 11
 assert sut.day == 17
@@ -66,8 +65,19 @@ sut = Canterbury.get_actual(2006)
 assert sut.year == 2006
 assert sut.month == 12
 assert sut.day == 16
-assert sut.weekday() == 3
+assert sut.weekday() == 5
 
+sut = Canterbury.get_holiday(2007)
+assert sut.year == 2007
+assert sut.month == 11
+assert sut.day == 16
+assert sut.weekday() == 4
+# But the actual day remains in January
+sut = Canterbury.get_actual(2007)
+assert sut.year == 2007
+assert sut.month == 12
+assert sut.day == 16
+assert sut.weekday() == 6
 ###################
 # Chatham Islands #
 ###################

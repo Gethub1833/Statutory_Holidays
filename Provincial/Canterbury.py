@@ -15,10 +15,10 @@ def get_holiday(year):
     # 0 +1
     if weekday in (0, 1):
         # Monday and Tuesday
-        correction = weekday + 1-weekday
+        correction = weekday + weekday
     else:
         # Wednesday, Thursday, Friday, Saturday, Sunday
-        correction = weekday + (6 - weekday)
+        correction = 8 - weekday
     # return second Friday after first Tuesday
     return date(year, NOVEMBER, 1)+timedelta(days=correction+10)
 
