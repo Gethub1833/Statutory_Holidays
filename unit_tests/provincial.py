@@ -1,5 +1,4 @@
 __author__ = 'shane'
-import pytest
 from Provincial import Auckland, Canterbury, Chathams, Hawkes_Bay, \
     Marlborough, Nelson, Otago, South_Canterbury, Southland, Taranaki, Wellington, Westland
 from datetime import date
