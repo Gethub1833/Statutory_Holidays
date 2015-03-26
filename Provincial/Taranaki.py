@@ -8,11 +8,7 @@ def get_holiday(year):
     weekday = date(year, MARCH, 1).weekday()
     # 0 +1
     if weekday == 0:
-        day = weekday+1
-    # 1 = 1
-    elif weekday == 1:
-        day = weekday
-    #8 = weekday
+        day = 7
     else:
         day = 8 - weekday
     return date(year, MARCH, day) + timedelta(days=7)

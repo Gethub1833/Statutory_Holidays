@@ -110,114 +110,53 @@ assert Nelson.get_actual(2014) == date(2014, 2, 1)
 # Otago #
 #########
 '''Otago	23 March	Monday 21 March	Monday 26 March	Monday 25 March	Monday 24 March'''
-# Easter clash (2008)
-sut = Otago.get_holiday(2011)
-assert sut.year == 2011
-assert sut.month == 3
-assert sut.day == 21
-assert sut.weekday() == 0
+assert Otago.get_holiday(2011) == date(2011, 3, 21)
 # But the actual day remains in January
-sut = Otago.get_actual(2011)
-assert sut.year == 2011
-assert sut.month == 3
-assert sut.day == 23
-assert sut.weekday() == 2
+assert Otago.get_actual(2011) == date(2011, 3, 23)
 
-sut = Otago.get_holiday(2008)
-assert sut.year == 2008
-assert sut.month == 3
-assert sut.day == 25
-assert sut.weekday() == 1
-# But the actual day remains in November
-sut = Otago.get_actual(2008)
-assert sut.year == 2008
-assert sut.month == 3
-assert sut.day == 23
-assert sut.weekday() == 6
+# Easter clash
+assert Otago.get_holiday(2008) == date(2008, 3, 25)
+# But the actual day remains in January
+assert Otago.get_actual(2008) == date(2008, 3, 23)
+
 
 ####################
 # South Canterbury #
 ####################
 '''Canterbury (South)	16 December	Monday 26 September	Monday 24 September	Monday 23 September	Monday 22 September'''
-sut = South_Canterbury.get_holiday(2011)
-assert sut.year == 2011
-assert sut.month == 9
-assert sut.day == 26
-assert sut.weekday() == 0
-# But the actual day remains in January
-sut = South_Canterbury.get_actual(2011)
-assert sut.year == 2011
-assert sut.month == 12
-assert sut.day == 16
-assert sut.weekday() == 4
+assert South_Canterbury.get_holiday(2011) == date(2011, 9, 26)
 
-sut = South_Canterbury.get_holiday(2014)
-assert sut.year == 2014
-assert sut.month == 9
-assert sut.day == 22
-assert sut.weekday() == 0
-# But the actual day remains in November
-sut = South_Canterbury.get_actual(2014)
-compare = date(2014, 12, 16)
-assert sut.year == compare.year
-assert sut.month == compare.month
-assert sut.day == compare.day
-assert sut.weekday() == compare.weekday()
+assert South_Canterbury.get_actual(2011) == date(2011, 12, 16)
+
+assert South_Canterbury.get_holiday(2014) == date(2014, 9, 22)
+
+assert South_Canterbury.get_actual(2014) == date(2014, 12, 16)
+
 
 #############
 # Southland #
 #############
 '''Southland	17 January	Monday 17 January	Tuesday 10 April	Tuesday 2 April	Tuesday 22 April'''
-sut = Southland.get_holiday(2011)
-assert sut.year == 2011
-assert sut.month == 1
-assert sut.day == 31
-assert sut.weekday() == 0
-# But the actual day remains in January
-sut = Southland.get_actual(2011)
-assert sut.year == 2011
-assert sut.month == 1
-assert sut.day == 17
-assert sut.weekday() == 1
+assert Southland.get_holiday(2011) == date(2011, 1, 17)
 
-sut = Southland.get_holiday(2014)
-assert sut.year == 2014
-assert sut.month == 2
-assert sut.day == 3
-assert sut.weekday() == 0
-# But the actual day remains in November
-sut = Southland.get_actual(2014)
-assert sut.year == 2014
-assert sut.month == 2
-assert sut.day == 1
-assert sut.weekday() == 5
+assert Southland.get_actual(2011) == date(2011, 1, 17)
+
+assert Southland.get_holiday(2012) == date(2012, 4, 10)
+
+assert Southland.get_actual(2012) == date(2012, 1, 17)
+
 ############
 # Taranaki #
 ############
 '''Taranaki	31 March	Monday 14  March	Monday 12 March	Monday 11 March	Monday 10 March'''
-sut = Taranaki.get_holiday(2011)
-assert sut.year == 2011
-assert sut.month == 1
-assert sut.day == 31
-assert sut.weekday() == 0
-# But the actual day remains in January
-sut = Taranaki.get_actual(2011)
-assert sut.year == 2011
-assert sut.month == 2
-assert sut.day == 1
-assert sut.weekday() == 1
+assert Taranaki.get_holiday(2011) == date(2011, 3, 14)
 
-sut = Taranaki.get_holiday(2014)
-assert sut.year == 2014
-assert sut.month == 2
-assert sut.day == 3
-assert sut.weekday() == 0
-# But the actual day remains in November
-sut = Taranaki.get_actual(2014)
-assert sut.year == 2014
-assert sut.month == 2
-assert sut.day == 1
-assert sut.weekday() == 5
+assert Taranaki.get_actual(2011) == date(2011, 3, 31)
+
+assert Taranaki.get_holiday(2014) == date(2014, 3, 10)
+
+assert Taranaki.get_actual(2014) == date(2014, 3, 31)
+
 ##############
 # Wellington #
 ##############

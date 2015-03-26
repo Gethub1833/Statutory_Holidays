@@ -3,9 +3,12 @@ from datetime import date, timedelta
 
 
 def get_holiday(year):
-    import Easter_Monday
-    return Easter_Monday.get_holiday(year) + timedelta(days=1)
+    if year > 2011:
+        import Easter_Monday
+        return Easter_Monday.get_holiday(year) + timedelta(days=1)
+    else:
+        return get_actual(year)
 
 def get_actual(year):
-    MARCH=3
-    return date(year,MARCH,25)
+    JANUARY = 1
+    return date(year, JANUARY, 17)
