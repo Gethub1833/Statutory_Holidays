@@ -7,7 +7,7 @@ import stat_helper
 def get_holiday(year):
     MARCH = 3
     weekday = get_actual(year).weekday()
-    import Easter_Sunday
+    from Easter import Easter_Sunday
     # This holiday varies if easter falls on the same weekend
     easter_sunday = Easter_Sunday.get_actual(year)
     if easter_sunday.month == MARCH and easter_sunday.day in range(22, 26):

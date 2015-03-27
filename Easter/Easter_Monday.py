@@ -1,6 +1,8 @@
 __author__ = 'shane'
-import Easter_Sunday
 from datetime import timedelta
+
+from Easter import Easter_Sunday
+
 
 def get_holiday(year):
     # Return the Monday after Easter Sunday

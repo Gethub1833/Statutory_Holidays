@@ -1,23 +1,17 @@
-import pytest
-import Christmas
-import Boxing_day
-import random
-import Queens_Birthday
-import Labour_day
-import Easter_Sunday
-# Christmas tests
+from Easter import Easter_Sunday
+# Christmas_and_New_Year tests
 
 # get actual should produce a datetime object for
 #
 # year = random.randint(1, 5000)
-# print "Christmas tests done using:", year,"year"
+# print "Christmas_and_New_Year tests done using:", year,"year"
 # print "Get Actual"
-# sut = Christmas.get_actual(year)
+# sut = Christmas_and_New_Year.get_actual(year)
 # print sut.year == year
 # print sut.month == 12
 # print sut.day == 25
 # print "Get Observed"
-# sut = Christmas.get_holiday(year)
+# sut = Christmas_and_New_Year.get_holiday(year)
 # print sut.year == year
 # print sut.month == 12
 # print sut.day == 25
@@ -37,7 +31,7 @@ import Easter_Sunday
 #
 # # year = random.randint(-1000, 0)
 # # print "Tests done using:", year,"year"
-# # sut = Christmas.get_actual(year)
+# # sut = Christmas_and_New_Year.get_actual(year)
 # # print sut.year == year
 # # print sut.month == 12
 # # print sut.day == 25

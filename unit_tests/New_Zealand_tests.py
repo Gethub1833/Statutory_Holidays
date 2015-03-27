@@ -1,7 +1,10 @@
 __author__ = 'shane'
-from New_Zealand import ANZAC, Boxing_day, Christmas, Day_After_New_Years, Easter_Monday, \
-     Good_Friday, Labour_day, New_Years_day, Queens_Birthday, Waitangi
 from datetime import date
+
+from New_Zealand import ANZAC, Labour_day, Queens_Birthday, Waitangi
+from Christmas_and_New_Year import Christmas, Boxing_day, New_Years_day, Day_After_New_Years
+from Easter import Easter_Monday, Good_Friday
+
 
 ############
 # Waitangi #
@@ -98,10 +101,10 @@ assert Boxing_day.get_holiday(2015) == date(2015, 12, 28)
 assert Boxing_day.get_actual(2015) == date(2015, 12, 26)
 
 #################
-# Christmas Day #
+# Christmas_and_New_Year Day #
 #################
 '''
-Christmas Day	25 December	Sunday 25 December or Tuesday 27 December	Tuesday 25 December	Wednesday 25 December	Thursday 25 December
+Christmas_and_New_Year Day	25 December	Sunday 25 December or Tuesday 27 December	Tuesday 25 December	Wednesday 25 December	Thursday 25 December
 '''
 assert Christmas.get_holiday(2011) == date(2011, 12, 27)
 assert Christmas.get_actual(2011) == date(2011, 12, 25)

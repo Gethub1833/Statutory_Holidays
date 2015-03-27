@@ -11,7 +11,7 @@ For employees who would otherwise work on that Saturday or Sunday, the public ho
 
 def get_holiday(year):
     '''
-    Calculate the observed date of Christmas for the given year
+    Calculate the observed date of Christmas_and_New_Year for the given year
     :param year: int
     :return: datetime object set for the observed date
     '''

@@ -4,7 +4,8 @@ from datetime import date, timedelta
 
 def get_holiday(year):
     if year > 2011:
-        from New_Zealand import Easter_Monday
+        from Easter import Easter_Monday
+
         return Easter_Monday.get_holiday(year) + timedelta(days=1)
     else:
         return get_actual(year)

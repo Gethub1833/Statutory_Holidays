@@ -19,7 +19,7 @@ def get_holiday(year):
     DECEMBER = 12
 
     if datetime.date(year, DECEMBER, 26).weekday() in (5,6):
-        # Christmas falls on the weekend
+        # Christmas_and_New_Year falls on the weekend
         return datetime.date(year, DECEMBER, 28)
     else:
         return datetime.date(year, DECEMBER, 26)
