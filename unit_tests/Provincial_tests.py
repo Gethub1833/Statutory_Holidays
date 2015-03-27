@@ -1,6 +1,6 @@
 __author__ = 'shane'
-from Provincial import Auckland, Canterbury, Chathams, Hawkes_Bay, \
-    Marlborough, Nelson, Otago, South_Canterbury, Southland, Taranaki, Wellington, Westland
+from New_Zealand.Provincial import Auckland, Canterbury, Chathams, Hawkes_Bay, \
+     Marlborough, Nelson, Otago, South_Canterbury, Southland, Taranaki, Wellington, Westland
 from datetime import date
 
 

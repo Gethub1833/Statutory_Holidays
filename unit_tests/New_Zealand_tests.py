@@ -1,5 +1,5 @@
 __author__ = 'shane'
-import ANZAC, Boxing_day, Christmas, Day_After_New_Years, Easter_Monday, \
+from New_Zealand import ANZAC, Boxing_day, Christmas, Day_After_New_Years, Easter_Monday, \
      Good_Friday, Labour_day, New_Years_day, Queens_Birthday, Waitangi
 from datetime import date
 
