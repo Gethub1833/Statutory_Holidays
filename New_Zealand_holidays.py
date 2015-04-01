@@ -1,14 +1,7 @@
 __author__ = 'shane'
-import ANZAC
-import Boxing_day
-import Christmas_and_New_Year
-import Day_After_New_Years
-import Easter_Monday
-import Good_Friday
-import Labour_day
-import New_Years_day
-import Queens_Birthday
-import Waitangi
+from New_Zealand import ANZAC, Labour_day, Queens_Birthday, Waitangi
+from Christmas_and_New_Year import Boxing_day, Christmas, New_Years_day, Day_After_New_Years
+from Easter import Easter_Monday, Good_Friday
 
 
 def get_national_holidays(year):
@@ -19,7 +12,7 @@ def get_national_holidays(year):
 
     return {'ANZAC Day': ANZAC.get_holiday(year),
             'Boxing Day': Boxing_day.get_holiday(year),
-            'Christmas_and_New_Year': Christmas_and_New_Year.get_holiday(year),
+            'Christmas': Christmas.get_holiday(year),
             'Day After New Years': Day_After_New_Years.get_holiday(year),
             'Easter Monday': Easter_Monday.get_holiday(year),
             'Good Friday': Good_Friday.get_holiday(year),
