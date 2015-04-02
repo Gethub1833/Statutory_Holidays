@@ -48,7 +48,7 @@ def get_holiday(year):
             return date(year, 10, 1,) + timedelta(days=7-weekday+7)
     else:
         # Need to know the school holiday algorithm
-        warnings.warn("There is no documented algorithm for this holiday")
+        warnings.warn("This information may be incorrect as there is no documented algorithm for this holiday")
         # returning the 4th Monday in September
         return date(year, 9, 1) + timedelta(days=28-date(year, 9, 1).weekday())
 

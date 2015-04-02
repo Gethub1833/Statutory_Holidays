@@ -19,7 +19,7 @@ def get_holiday(year):
     if weekday == 0:
         weekday = 7
 
-    if year > 2007:
+    if year <= 2007:
         # Third Monday in March
         weekday = 21 - weekday
 

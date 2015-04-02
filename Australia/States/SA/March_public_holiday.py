@@ -11,9 +11,9 @@ def get_holiday(year):
     weekday = date(year, 3, 1).weekday()
     if year < 2006:
         # Third Monday March
-        correction = 28
-    else:
         correction = 21
+    else:
+        correction = 14
     if weekday == 0:
         weekday =7
     return date(year, 3, 1) + timedelta(days=correction-weekday)
