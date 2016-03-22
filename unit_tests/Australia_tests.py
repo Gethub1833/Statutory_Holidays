@@ -1,4 +1,8 @@
 __author__ = 'shane'
+import sys
+import os.path
+
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 from Australia import Australia_day, Easter_Saturday, ANZAC
 from Christmas_and_New_Year import New_Years_day, Christmas, Boxing_day
 from Easter import Good_Friday, Easter_Monday

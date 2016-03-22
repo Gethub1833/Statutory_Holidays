@@ -1,4 +1,8 @@
 __author__ = 'shane'
+import sys
+import os.path
+
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 from New_Zealand.Provincial import Auckland, Canterbury, Chathams, Hawkes_Bay, \
      Marlborough, Nelson, Otago, South_Canterbury, Southland, Taranaki, Wellington, Westland
 from datetime import date
@@ -20,6 +24,7 @@ Date	Monday closest to 29 January
 2017 date	30 January
 Frequency	annual
 '''
+print "Testing Auckland Anniversary holiday"
 
 # In 2016 the holiday falls in February
 assert Auckland.get_holiday(2016) == date(2016, 2, 1)

@@ -1,4 +1,8 @@
 __author__ = 'shane'
+import sys
+import os.path
+
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
 from Australia.States.ACT import Canberra, Community
 from Australia.States import Queens_birthday, Labour

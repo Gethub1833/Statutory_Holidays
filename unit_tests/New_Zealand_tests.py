@@ -1,5 +1,9 @@
 __author__ = 'shane'
 from datetime import date
+import sys
+import os.path
+
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
 from New_Zealand import ANZAC, Labour_day, Queens_Birthday, Waitangi
 from Christmas_and_New_Year import Christmas, Boxing_day, New_Years_day, Day_After_New_Years
